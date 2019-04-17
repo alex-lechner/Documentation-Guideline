@@ -7,7 +7,7 @@
 [online-markdown-editor]: https://dillinger.io/
 [markdown-basics]: https://www.writethedocs.org/guide/writing/Markdown_basics/
 [license]: ./LICENSE.md
-[issue-tracker]: https://github.com/alex-lechner/documentation-guideline/issues
+[issue-tracker]: https://github.com/alex-lechner/Documentation-Guideline/issues
 [readme-template]: ./template/README.md
 
 This documentation guideline serves as a boilerplate template and tutorial for writing good, structured documentation of your codebase.
@@ -29,7 +29,11 @@ This documentation guideline serves as a boilerplate template and tutorial for w
 
 Good documentation is like a good book: Fun to read and easy to understand but hard (and often annoying) to write. Even though it is the least exciting part in software development it is still the developer's responsibility to ensure a comprehensible and well-documented codebase.
 
-This project shall help developers to write an easy to understand documentation and provides a template which can be reused and adapted throughout different projects. All the given advice in this document provides a framework which can be altered. It shall give developers a kick start and **DOES NOT** enforce any strict rules.
+Because I get worked up over badly documented dependencies, libraries, etc. on which my work depends on I decided to come up with a guideline and template that I can use for my own projects as well.
+
+So this project shall help developers to write an easy to understand documentation and provides a template which can be reused and adapted throughout different projects. All the given advice in this document provides a framework which can be altered. It shall give developers a kick start and **DOES NOT** enforce any strict rules.
+
+No more excuses for writing (good) documentation, fellows! 📝😈
 
 ## Getting Started
 
