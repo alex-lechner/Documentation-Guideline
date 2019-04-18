@@ -1,18 +1,18 @@
 # Project title
 
 [//]: # "References"
-[logo]: https://via.placeholder.com/720x300/000000/FFFFFF/?text=project+logo
+[logo]: https://via.placeholder.com/900x300/000000/FFFFFF/?text=project+logo
 [shields-badge]: https://img.shields.io/badge/make%20your%20own%20badges-on%20shields.io-brightgreen.svg
 [sample link with url]: https://your-external-link.com
 [sample link with reference to a headline]: #project-title
 [sample link to your file in project]: ./your-folder/your-file.txt
 [documentation-link]: #
 [issue-tracker]: #
-[contributor-one-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-one-img]: https://via.placeholder.com/150?text=profile+image
 [contributor-one-link]: #
-[contributor-two-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-two-img]: https://via.placeholder.com/150?text=profile+image
 [contributor-two-link]: #
-[contributor-three-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-three-img]: https://via.placeholder.com/150?text=profile+image
 [contributor-three-link]: #
 [license]: #
 [sphinx]: https://www.sphinx-doc.org/en/master/
@@ -58,8 +58,8 @@ Further elaborate on what your project is about and the motivation behind it. Do
 ### Installation
 
 1. Write step-by-step instructions on how to set up and install the project.
-2. Don't assume that your team members now what to do! So include every little step.
-3. Provide instructions for Linux, OSX and Windows if possible.
+2. Don't assume that your team members know what to do! So include every little step.
+3. Provide instructions for Linux, OSX, and Windows if possible.
 
 ```
 Don't forget to include code snippets for easier understanding!
@@ -80,6 +80,12 @@ Describe how your team members and contributors can contribute to this project. 
 | [![Max Mustermann][contributor-one-img]<br>Max Mustermann][contributor-one-link] | [![John Doe][contributor-two-img]<br>John Doe][contributor-two-link] | [![Zhang San][contributor-three-img]<br>Zhang San][contributor-three-link] |
 | :------------------------------------------------------------------------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------------: |
 
+
+Now that you have included yourself, your contributors and/or team members above also make sure to list some further inspirational sources and references for your project:
+
+- [Some nice article you have read](#)
+- [An awesome GitHub repository that you have made use of](#)
+- [A StackOverflow question that has helped you out](#)
 
 ## License
 

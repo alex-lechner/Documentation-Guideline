@@ -1,7 +1,7 @@
 # Documentation Guideline
 
 [//]: # "References"
-[logo]: https://via.placeholder.com/720x300/000000/FFFFFF/?text=logo+placeholder
+[logo]: https://via.placeholder.com/900x300/000000/FFFFFF/?text=logo+placeholder
 [license-badge]: https://img.shields.io/badge/license-BSD-green.svg
 [beginners-guide-to-documentation]: https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
 [documentation-style-guide]: https://www.writethedocs.org/guide/writing/style-guides/
@@ -91,9 +91,13 @@ If you think this project lacks some further crucial information or you have som
 
 ## Acknowledgement
 
-| [![Alexander Lechner](https://avatars.githubusercontent.com/alex-lechner?s=100)<br>Alexander Lechner](https://alexanderlechner.com) |
+| [![Alexander Lechner](https://avatars.githubusercontent.com/alex-lechner?s=150)<br>Alexander Lechner](https://alexanderlechner.com) |
 | :---------------------------------------------------------------------------------------------------------------------------------: |
 
+
+For this project I've used some inspiration of other sources as well. Make sure to checkout:
+
+- [cezaraugusto's Guidlines for GitHub Templates](https://github.com/cezaraugusto/github-template-guidelines)
 
 ## License
 
