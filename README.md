@@ -171,7 +171,7 @@ Not every header needs to have a paragraph afterward ;)
 
 Here again some sample text.
 
-##### Now you understood the concept
+##### Now you understand the concept
 
 We're done!
 ```
