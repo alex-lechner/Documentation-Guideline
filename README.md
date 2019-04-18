@@ -9,6 +9,10 @@
 [online-markdown-editor]: https://dillinger.io/
 [markdown-basics]: https://www.writethedocs.org/guide/writing/Markdown_basics/
 [w3-headers]: https://www.w3schools.com/html/html_headings.asp
+[latex-editor]: https://www.codecogs.com/latex/eqneditor.php
+[dont-make-me-think-book]: https://www.amazon.de/Dont-Make-Me-Think-Usability/dp/0321965515
+[npm-documentation]: https://docs.npmjs.com/files/package.json
+[grammarly-app]: https://app.grammarly.com
 [license]: ./LICENSE.md
 [issue-tracker]: https://github.com/alex-lechner/Documentation-Guideline/issues
 [readme-template]: ./template/README.md
@@ -40,6 +44,11 @@ This documentation guideline serves as a boilerplate template and tutorial for w
       - [Provide links to references](#provide-links-to-references)
         - [Bad example](#bad-example-2)
         - [Good example](#good-example-2)
+    - [Wording](#wording)
+      - [Write for the DAU (dumbest assumable user)](#write-for-the-dau-dumbest-assumable-user)
+        - [Bad Example](#bad-example)
+        - [Good example](#good-example-3)
+      - [Grammar and spelling](#grammar-and-spelling)
   - [Contribution](#contribution)
   - [Acknowledgement](#acknowledgement)
   - [License](#license)
@@ -75,7 +84,10 @@ So here is the suggested approach for this project:
 1. Read through this whole README first to get a grasp of what makes good documentation (in my opinion).
 2. Take note of the advice given in this README.
 3. Take a look at the README in [template/README.md][readme-template]. (Notice how it has the same structure as this README? The difference is it has less text and clear instructions.)
-4. Clone this repository.
+4. Clone this repository by executing the following command in your terminal or command line:
+   ```sh
+   git clone https://github.com/alex-lechner/Documentation-Guideline.git
+   ```
 5. Copy the README from [template/README.md][readme-template] and paste it into your project.
 6. Write documentation that rocks! 🎸
 
@@ -242,7 +254,74 @@ Another representation of world-class documentation
 
 I suggest placing your link collection at the very beginning of your document right after your project's title. Having collection like this makes it a single point of error and therefore better traceable in case of broken links.
 
-TODO: Describe how the documentation shall be written (grammar, tenses, formulate for DAU)
+### Wording
+
+I get it. You are an engineer, have some sort of cool Ph.D. and you belong to the people at the top end of the cognitive strata. Luckily, school and university are over! Your team members and contributors don't give a damn about how articulate you are because they want to be productive as fast as possible. Using fancy, old-fashioned words don't get your colleagues anywhere. Make sure to use simple and commonly used words. With that being said this does not mean that you should not include any complicated math formulas that are necessary for your project. If you need to provide math formulas you can do so with a [LaTex editor][latex-editor] but keep in mind that some of your collaborators might not have any clue what the symbols mean. To prevent that always make sure to explain what the formula does and how it can be calculated if you substitute the variables.
+
+#### Write for the DAU (dumbest assumable user)
+
+> _"An alleged scientific discovery has no merit unless it can be explained to a barmaid."_
+>
+> Ernest Rutherford
+
+Another variant of this is: _"You do not really understand something unless you can explain it to your grandmother."_
+
+And it's totally true. You have to explain everything in plain language. Every single step needs to be documented and easy to understand. Don't assume that your collaborators know what to do, truth is they often don't. In fact, everyone becomes the DAU (dumbest assumable user) when starting a new project. You want to give your reader a step-by-step tutorial on how to set up your project and an instruction on where to start.
+
+Keep in mind: **There's no such thing as too much documentation, only too less.**
+
+Also, readers want to be guided. So giving you're readers too many options and choices to start with will make them think (in a negative way). I always think of documentation like a website (because it is in some sense). You should give clear instructions for the reader and don't make your readers think about what to do.
+
+There's also a book called [Don't make me think by Steve Kruger][dont-make-me-think-book] (no affiliate link) which provides an approach to usability on websites. I think some of the book's principles can be adapted for writing good documentation.
+
+However, what you should avoid is documenting stuff which is already documented by other sources. You can simply provide a link for further information. To give you a quick example: Let's imagine you have a NodeJS project with the famous `package.json` file inside of your project's folder. For someone who is new to NodeJS, this file will be a complete mystery to that person. But instead of writing complete details about this file you can simply write: "The `package.json` file manages all necessary dependencies for production and development and provides basic configurations for the project. For further information please read [the official documentation][npm-documentation]."
+
+##### Bad Example
+
+```markdown
+## Install
+
+npm install bootstrap
+```
+
+##### Good example
+
+```markdown
+## Getting started
+
+### Prerequisites
+
+<!--
+List all necessary dependencies, libraries, packages, programs, etc. here that your project relies on.
+-->
+
+### Install
+
+1. Clone this repository by executing the following command in your terminal or command line:
+   git clone git@github.com:user/repo.git
+
+2. Navigate into the folder in your terminal or command line with:
+   cd the-project-folder
+
+3. Install Bootstrap with the following command:
+   npm install bootstrap
+```
+
+As the detailed steps in the good example above might look redundant to you, it certainly is not redundant for your collaborators. If your collaborators don't know anything about `npm` they will most certainly run into errors AFTER they have found out that they need to execute `npm install bootstrap` in the terminal or command prompt. So really make sure to explain every single step.
+
+Key takeaways:
+
+1. Explain everything
+2. Give step-by-step tutorials
+3. If something is already documented provide a link
+
+#### Grammar and spelling
+
+Remember that school and university are over? Even though you are in the real, practical world now this is not an excuse for you to forget about grammar, spelling rules and proper tenses. Since we are all human errors happen from time to time. To avoid this in the best possible way either try to let another person proofread your documentation or [use Grammarly][grammarly-app] before publishing your documentation. Personally, I prefer the latter because it's fast and convenient.
+
+The good part about not being in school and university anymore is that nobody dictates how many characters you have to write and which words you must not or have to use. People vote with their feet: If they don't like what you write they simply go away (or heavily criticize your documentation). It is your responsibility to find out what makes people engage with your content and adapt to that. You can either write your documentation dry and formal or make it a little more personal. You are the creator!
+
+In my opinion, I enjoy reading documentations with a human touch. Whether the documentation has some emojis, anecdotal side stories or even emotional statements it makes the whole documentation more refreshing. The purpose of documentation is to be informal but sprinkling a little bit of personality on it makes the documentation less boring. But don't overdo it!
 
 TODO: Explain when and how to use a documentation tool
 
@@ -258,9 +337,8 @@ If you think this project lacks some further crucial information or you have som
 
 ## Acknowledgement
 
-| [![Alexander Lechner][alex-lechner-img]<br>Alexander Lechner][alex-lechner-link] |
-| :------------------------------------------------------------------------------: |
-
+<!-- | [![Alexander Lechner][alex-lechner-img]<br>Alexander Lechner][alex-lechner-link] |
+| :------------------------------------------------------------------------------: | -->
 
 For this project, I have used some inspiration from other resources as well. Make sure to check out the following resources:
 
