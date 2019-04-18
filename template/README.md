@@ -1,20 +1,33 @@
 # Project title
 
-[//]: # (References)
+[//]: # "References"
+[logo]: https://via.placeholder.com/720x300/000000/FFFFFF/?text=project+logo
+[shields-badge]: https://img.shields.io/badge/make%20your%20own%20badges-on%20shields.io-brightgreen.svg
 [sample link with url]: https://your-external-link.com
 [sample link with reference to a headline]: #project-title
 [sample link to your file in project]: ./your-folder/your-file.txt
 [documentation-link]: #
 [issue-tracker]: #
+[contributor-one-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-one-link]: #
+[contributor-two-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-two-link]: #
+[contributor-three-img]: https://via.placeholder.com/100?text=profile+image
+[contributor-three-link]: #
 [license]: #
 [sphinx]: https://www.sphinx-doc.org/en/master/
 [mkdocs]: https://www.mkdocs.org/
 [gitbook]: https://www.gitbook.com/
 [bibtex-wikipedia]: https://en.wikipedia.org/wiki/BibTeX
 
+![Your project's logo][logo]
+
+[![shields.io badge][shields-badge]](https://shields.io)
+
 One short sentence about your project goes here.
 
 ## Table of Contents
+
 - [Project title](#project-title)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -23,10 +36,10 @@ One short sentence about your project goes here.
     - [Installation](#installation)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
+  - [Acknowledgement](#acknowledgement)
   - [License](#license)
   - [Citation](#citation)
   - [Contact](#contact)
-
 
 ## Introduction
 
@@ -36,11 +49,11 @@ Further elaborate on what your project is about and the motivation behind it. Do
 
 ### Prerequisites
 
-* [List AND link all necessary dependencies, libraries, modules, helpful links and tutorials in regards to your project.](#)
-* [Even though you use a dependency management tool like NPM or Pipfile.](#)
-* [This helps contributors to understand your project's scaffold.](#)
-* [And your contributors and team members are faster set up with your project.](#)
-* If specific hardware or operating system is required, make sure to mention it too.
+- [List AND link all necessary dependencies, libraries, modules, helpful links and tutorials in regards to your project.](#)
+- [Even though you use a dependency management tool like NPM or Pipfile.](#)
+- [This helps contributors to understand your project's scaffold.](#)
+- [And your contributors and team members are faster set up with your project.](#)
+- If specific hardware or operating system is required, make sure to mention it too.
 
 ### Installation
 
@@ -54,7 +67,7 @@ Don't forget to include code snippets for easier understanding!
 
 ## Documentation
 
-Either write your documentation here or [provide a link to your extensive documentation][documentation-link]. 
+Either write your documentation here or [provide a link to your extensive documentation][documentation-link].
 
 If you have a big code base and lots of things to document you should consider using a documentation tool like [Sphinx][sphinx], [Mkdocs][mkdocs], [Gitbook][gitbook] or any other documentation tool which generates static HTML-files.
 
@@ -62,15 +75,22 @@ If you have a big code base and lots of things to document you should consider u
 
 Describe how your team members and contributors can contribute to this project. If you have specific style guideline which should be obeyed be sure to mention it here as well. Also, include a link to your issues tracker if you have one e.g. [github.com/project/issues][issue-tracker]
 
+## Acknowledgement
+
+| [![Max Mustermann][contributor-one-img]<br>Max Mustermann][contributor-one-link] | [![John Doe][contributor-two-img]<br>John Doe][contributor-two-link] | [![Zhang San][contributor-three-img]<br>Zhang San][contributor-three-link] |
+| :------------------------------------------------------------------------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------------: |
+
+
 ## License
 
-Provide your License information here and link to your [LICENSE.md][license] file. 
+Provide your License information here and link to your [LICENSE.md][license] file.
 
 ## Citation
 
 Explain how other people can cite your project.
 
 Make sure you provide a [BibTeX formatted reference][bibtex-wikipedia] e.g.:
+
 ```
 @misc{yourlabel,
  author    = {Name of the authors},

@@ -1,6 +1,8 @@
 # Documentation Guideline
 
-[//]: # (References)
+[//]: # "References"
+[logo]: https://via.placeholder.com/720x300/000000/FFFFFF/?text=logo+placeholder
+[license-badge]: https://img.shields.io/badge/license-BSD-green.svg
 [beginners-guide-to-documentation]: https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
 [documentation-style-guide]: https://www.writethedocs.org/guide/writing/style-guides/
 [adam-p-markdown-cheatsheet]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
@@ -10,9 +12,14 @@
 [issue-tracker]: https://github.com/alex-lechner/Documentation-Guideline/issues
 [readme-template]: ./template/README.md
 
+![Your project's logo][logo]
+
+![BSD License][license-badge]
+
 This documentation guideline serves as a boilerplate template and tutorial for writing good, structured documentation of your codebase.
 
 ## Table of Contents
+
 - [Documentation Guideline](#documentation-guideline)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
@@ -21,6 +28,7 @@ This documentation guideline serves as a boilerplate template and tutorial for w
     - [Installation](#installation)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
+  - [Acknowledgement](#acknowledgement)
   - [License](#license)
   - [Citation](#citation)
   - [Contact](#contact)
@@ -41,14 +49,14 @@ No more excuses for writing (good) documentation, fellows! 📝😈
 
 This boilerplate is written in Markdown language so what you will need is a text editor and some knowledge on how to write Markdown.
 
-* [Markdown Basics][markdown-basics]
-* [adam-p's Markdown Cheatsheet][adam-p-markdown-cheatsheet]
-* [Online Markdown editor][online-markdown-editor]
+- [Markdown Basics][markdown-basics]
+- [adam-p's Markdown Cheatsheet][adam-p-markdown-cheatsheet]
+- [Online Markdown editor][online-markdown-editor]
 
 Furthermore, if you need some additional information on how to write documentation I encourage you to read the following resources:
 
-* [A beginner’s guide to writing documentation][beginners-guide-to-documentation]
-* [Style Guides for Documentation][documentation-style-guide]
+- [A beginner’s guide to writing documentation][beginners-guide-to-documentation]
+- [Style Guides for Documentation][documentation-style-guide]
 
 ### Installation
 
@@ -75,11 +83,17 @@ TODO: Give bad, good and best examples if code snippets are included
 
 TODO: How files and code references should be highlighted
 
-TODO: Include examples of well-documented projects 
+TODO: Include examples of well-documented projects
 
 ## Contribution
 
 If you think this project lacks some further crucial information or you have some good advice, best-practices or crazy ideas feel free to submit a pull request or file an issue under [github.com/alex-lechner/documentation-guideline/issues][issue-tracker]
+
+## Acknowledgement
+
+| [![Alexander Lechner](https://avatars.githubusercontent.com/alex-lechner?s=100)<br>Alexander Lechner](https://alexanderlechner.com) |
+| :---------------------------------------------------------------------------------------------------------------------------------: |
+
 
 ## License
 
