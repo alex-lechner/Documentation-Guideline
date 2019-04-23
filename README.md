@@ -364,7 +364,9 @@ Another representation of world-class documentation
 > # Project title
 >
 > [//]: # "References"
-> [image-of-a-cat]: https://placekitten.com/200/300 > [personal-website]: https://google.com
+> [personal-website]: https://google.com
+>
+> [image-of-a-cat]: https://placekitten.com/200/300
 >
 > ![Some cat image][image-of-a-cat]
 >
