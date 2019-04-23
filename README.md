@@ -17,6 +17,11 @@
 [mkdocs]: https://www.mkdocs.org/
 [gitbook]: https://www.gitbook.com/
 [read-the-docs]: https://readthedocs.org/
+[footnote-1]: #footnote-1
+[slack-api-doc]: https://api.slack.com/#read_the_docs
+[traefik-doc]: https://github.com/containous/traefik
+[digitalocean-doc]: https://www.digitalocean.com/docs/
+[secure-linux-server-doc]: https://github.com/imthenachoman/How-To-Secure-A-Linux-Server
 [license]: ./LICENSE.md
 [issue-tracker]: https://github.com/alex-lechner/Documentation-Guideline/issues
 [readme-template]: ./template/README.md
@@ -25,7 +30,7 @@
 
 ![Your project's logo][logo]
 
-![BSD License][license-badge]
+[![BSD License][license-badge]][license]
 
 This documentation guideline serves as a boilerplate template and tutorial for writing good, structured documentation of your codebase.
 
@@ -50,14 +55,20 @@ This documentation guideline serves as a boilerplate template and tutorial for w
         - [Good example](#good-example-2)
     - [Wording](#wording)
       - [Write for the DAU (dumbest assumable user)](#write-for-the-dau-dumbest-assumable-user)
-        - [Bad Example](#bad-example)
+        - [Bad](#bad)
         - [Good example](#good-example-3)
       - [Grammar and spelling](#grammar-and-spelling)
     - [Documentation tools](#documentation-tools)
-      - [Bad Example](#bad-example-1)
+      - [Bad Example](#bad-example)
       - [Good example](#good-example-4)
-    - [Code snippets](#code-snippets)
-    - [Good documentation examples](#good-documentation-examples)
+    - [Highlighting](#highlighting)
+      - [Code blocks](#code-blocks)
+        - [Bad example](#bad-example-3)
+        - [Good example](#good-example-5)
+      - [Filenames & line numbers](#filenames--line-numbers)
+        - [Bad example](#bad-example-4)
+        - [Good example](#good-example-6)
+    - [Real world examples](#real-world-examples)
   - [Contribution](#contribution)
   - [Acknowledgement](#acknowledgement)
   - [License](#license)
@@ -112,7 +123,9 @@ Again, think of your documentation like a book: It might start small with a few 
 
 ##### Bad example
 
-```md
+**Markdown**
+
+```markdown
 - [h2-header](#link-to-your-h1-headline)
 - [h1-header](#link-to-your-h2-headline)
   - [h3-header](#link-to-your-h3-headline)
@@ -121,9 +134,20 @@ Again, think of your documentation like a book: It might start small with a few 
   - [h6-header](#link-to-your-h6-headline)
 ```
 
+**Output**
+
+> - [h2-header](#link-to-your-h1-headline)
+> - [h1-header](#link-to-your-h2-headline)
+>   - [h3-header](#link-to-your-h3-headline)
+>   - [h4-header](#link-to-your-h4-headline)
+> - [h5-header](#link-to-your-h5-headline)
+>   - [h6-header](#link-to-your-h6-headline)
+
 ##### Good example
 
-```md
+**Markdown**
+
+```markdown
 - [h1-header](#link-to-your-h1-headline)
   - [h2-header](#link-to-your-h2-headline)
     - [h3-header](#link-to-your-h3-headline)
@@ -134,6 +158,18 @@ Again, think of your documentation like a book: It might start small with a few 
     - [h3-header](#link-to-your-h3-headline)
     - [h3-header](#link-to-your-h3-headline)
 ```
+
+**Output**
+
+> - [h1-header](#link-to-your-h1-headline)
+>   - [h2-header](#link-to-your-h2-headline)
+>     - [h3-header](#link-to-your-h3-headline)
+>       - [h4-header](#link-to-your-h4-headline)
+>         - [h5-header](#link-to-your-h5-headline)
+>           - [h6-header](#link-to-your-h6-headline)
+>   - [h2-header](#link-to-your-h2-headline)
+>     - [h3-header](#link-to-your-h3-headline)
+>     - [h3-header](#link-to-your-h3-headline)
 
 Every headline that is a child of the previous headline needs to be indented by two spaces. If you indent list items like the headers in our example then Markdown will know that the indented item is a child of the previous item. The indentation gives the reader an orientation and understanding of the relation of your content.
 
@@ -157,6 +193,8 @@ The proper order of headers basically means you can not use an h3-header if you 
 
 ##### Bad example
 
+**Markdown**
+
 ```markdown
 # Some big headline
 
@@ -175,7 +213,27 @@ So much content, eh?
 Last text for this example.
 ```
 
+**Output**
+
+> # Some big headline
+>
+> Now some text.
+>
+> ### Some fancy small headline because I think it looks cool
+>
+> Some text again.
+>
+> # Some big headline again
+>
+> So much content, eh?
+>
+> ##### Now I want to be extra fancy with this headline
+>
+> Last text for this example.
+
 ##### Good example
+
+**Markdown**
 
 ```markdown
 # Some big headline
@@ -197,6 +255,26 @@ Here again some sample text.
 We're done!
 ```
 
+**Output**
+
+> # Some big headline
+>
+> Some good text.
+>
+> ## A structured and hierarchical headline
+>
+> ### Search engines will now love your page
+>
+> Not every header needs to have a paragraph afterward ;)
+>
+> #### Now I think you are less of an amateur
+>
+> Here again some sample text.
+>
+> ##### Now you understand the concept
+>
+> We're done!
+
 Even though this is a guideline for documentation you might ask yourself: "But what if the `<h2>`-header is too big and I want a fancy little `<h5>`-header?"
 
 The answer to this question is: Make use of CSS and the `class=""` or `id=""` properties in HTML to set the font size.
@@ -214,6 +292,8 @@ The reason I recommend this is because:
 3. If you change the value of the link it is applied to all references
 
 ##### Bad example
+
+**Markdown**
 
 ```markdown
 # Project title
@@ -235,7 +315,25 @@ This section is also documented with thousands of line
 ![I want to show the cat image again but I forgot the link... Now I have to scroll all the way up and search for the correct hyperlink](./my-cool-cat-folder/cutecat.png)
 ```
 
+**Output**
+
+> # Project title
+>
+> ![Some cat image](https://placekitten.com/200/300)
+>
+> [Link to a website](https://google.com)
+>
+> _Placeholder for 1000 lines of documentation_
+>
+> [Here I link to the same website again but this time I made a typo unintentionally](https.//goole.com)
+>
+> _Placeholder for 1000 lines of documentation_
+>
+> ![I want to show the cat image again but I forgot the link... Now I have to scroll all the way up and search for the correct hyperlink](./my-cool-cat-folder/cutecat.png)
+
 ##### Good example
+
+**Markdown**
 
 ```markdown
 # Project title
@@ -261,6 +359,25 @@ Another representation of world-class documentation
 ![Maybe I want to display the cat image again][image-of-a-cat]
 ```
 
+**Output**
+
+> # Project title
+>
+> [//]: # "References"
+> [image-of-a-cat]: https://placekitten.com/200/300 > [personal-website]: https://google.com
+>
+> ![Some cat image][image-of-a-cat]
+>
+> [Link to a website][personal-website]
+>
+> _Placeholder for 1000 lines of documentation_
+>
+> [Here I need the link to the same website again][personal-website]
+>
+> _Placeholder for 1000 lines of documentation_
+>
+> ![Maybe I want to display the cat image again][image-of-a-cat]
+
 I suggest placing your link collection at the very beginning of your document right after your project's title. Having collection like this makes it a single point of error and therefore better traceable in case of broken links.
 
 ### Wording
@@ -285,36 +402,86 @@ There's also a book called [Don't make me think by Steve Kruger][dont-make-me-th
 
 However, what you should avoid is documenting stuff which is already documented by other sources. You can simply provide a link for further information. To give you a quick example: Let's imagine you have a NodeJS project with the famous `package.json` file inside of your project's folder. For someone who is new to NodeJS, this file will be a complete mystery to that person. But instead of writing complete details about this file you can simply write: "The `package.json` file manages all necessary dependencies for production and development and provides basic configurations for the project. For further information please read [the official documentation][npm-documentation]."
 
-##### Bad Example
+##### Bad
 
-```markdown
+**Markdown**
+
+````markdown
 ## Install
 
+```
 npm install bootstrap
 ```
+````
+
+**Output**
+
+> ## Install
+>
+> ```
+> npm install bootstrap
+> ```
 
 ##### Good example
 
-```markdown
+**Markdown**
+
+````markdown
 ## Getting started
 
 ### Prerequisites
 
 <!--
-List all necessary dependencies, libraries, packages, programs, etc. here that your project relies on.
+List all necessary dependencies, libraries, packages, programs, etc. here
+that your project relies on.
 -->
 
 ### Install
 
 1. Clone this repository by executing the following command in your terminal or command line:
+
+   ```sh
    git clone git@github.com:user/repo.git
+   ```
 
 2. Navigate into the folder in your terminal or command line with:
+
+   ```sh
    cd the-project-folder
+   ```
 
 3. Install Bootstrap with the following command:
+   ```sh
    npm install bootstrap
-```
+   ```
+````
+
+**Output**
+
+> ## Getting started
+>
+> ### Prerequisites
+>
+> _Placeholder for list of dependencies and requirements_
+>
+> ### Install
+>
+> 1. Clone this repository by executing the following command in your terminal or command line:
+>
+>    ```sh
+>    git clone git@github.com:user/repo.git
+>    ```
+>
+> 2. Navigate into the folder in your terminal or command line with:
+>
+>    ```sh
+>    cd the-project-folder
+>    ```
+>
+> 3. Install Bootstrap with the following command:
+>    ```sh
+>    npm install bootstrap
+>    ```
 
 As the detailed steps in the good example above might look redundant to you, it certainly is not redundant for your collaborators. If your collaborators don't know anything about `npm` they will most certainly run into errors AFTER they have found out that they need to execute `npm install bootstrap` in the terminal or command prompt. So really make sure to explain every single step.
 
@@ -338,15 +505,26 @@ As your documentation grows bigger and bigger you might consider using a documen
 
 #### Bad Example
 
+**Markdown**
+
 ```markdown
 ## Documentation
 
 <!--
-More than 100.000 lines of documentation. It's very messy and collaborators will have to scroll all the way through.
+More than 500.000 lines of documentation. It's very messy and
+collaborators will have to scroll all the way through.
 -->
 ```
 
+**Output**
+
+> ## Documentation
+>
+> _Placeholder for 500.000 lines of documentation_
+
 #### Good example
+
+**Markdown**
 
 ```markdown
 ## Documentation
@@ -354,14 +532,194 @@ More than 100.000 lines of documentation. It's very messy and collaborators will
 [Please find the orderly structured documentation of this project on our website.][documentation-link]
 ```
 
-### Code snippets
+**Output**
 
-TODO: Give bad, good and best examples if code snippets are included
-TODO: How files and code references should be highlighted
+> [documentation-link]: #
+>
+> ## Documentation
+>
+> [Please find the orderly structured documentation of this project on our website.][documentation-link]
 
-### Good documentation examples
+### Highlighting
 
-TODO: Include examples of well-documented projects
+It's not enough to talk about your technical stuff only, you should include some code examples as well. While it might sound easy and self-explanatory there are a good amount of things to consider before posting any code blocks. Trust me, this isn't an easy thing and I have read lots of technical documentation that get this part wrong.
+
+Make sure to use backticks `` to emphasize content, a line number, relevant parts of your code, or even a filename. You will also have to make sure that proper syntax highlighting is activated when you show multiple lines of code in one snippet. What might sound simple and logical to you is not for many software engineers because most of them expect collaborators to have the same knowledge about the project as they do (which is NEVER the case).
+
+#### Code blocks
+
+It's always good to show examples of important parts of your code. But how do you figure out what's important, what to include and how to do it in general? When including code blocks (= multiple lines of code) take the following points as a guideline:
+
+1. The code must be syntax highlighted
+2. The code in the snippet must be executable<sup>[\*][footnote-1]</sup>
+3. The code in the snippet must deliver the desired result<sup>[\*][footnote-1]</sup>
+
+<b id="footnote-1">\*</b> If placeholders in the code block are substituted.
+
+Sounds easy? Let's take a look at the following examples with python:
+
+##### Bad example
+
+**Markdown**
+
+````markdown
+Connect to WebSocket server
+
+```
+my_websocket = WebSocket(
+  host='localhost',
+  port=9000
+)
+my_websocket.connect()
+```
+````
+
+**Output**
+
+> Connect to WebSocket server
+>
+> ```
+> my_websocket = CustomWebSocket(
+>   host='localhost',
+>   port=9000
+> )
+> my_websocket.connect()
+> ```
+
+##### Good example
+
+**Markdown**
+
+````markdown
+Execute the following code to successfully connect to the WebSocket server with the `CustomWebSocket`-class from our custom library `coolwebsocketlib`:
+
+```python <!-- Notice this line here for syntax highlighting --->
+
+import asyncio
+from coolwebsocketlib import CustomWebSocket
+
+async def example():
+  my_websocket = CustomWebSocket(
+    host='your-host-server', # For example: 'localhost'
+    port='your-port-number'  # For example: 9000
+  )
+  await my_websocket.connect()
+
+LOOP = asyncio.new_event_loop()
+try:
+    # Start the web socket connection and keep it open until aborted
+    LOOP.create_task(example())
+    LOOP.run_forever()
+finally:
+    LOOP.stop()
+    LOOP.close()
+
+```
+````
+
+**Output**
+
+> Execute the following code to sucessfully connect to the WebSocket server with the `CustomWebSocket`-class from our custom library `coolwebsocketlib`:
+>
+> ```python
+> import asyncio
+> from coolwebsocketlib import CustomWebSocket
+>
+> async def example():
+>   my_websocket = CustomWebSocket(
+>     host='your-host-server', # For example: 'localhost'
+>     port='your-port-number'  # For example: 9000
+>   )
+>   await my_websocket.connect()
+>
+> LOOP = asyncio.new_event_loop()
+> try:
+>     # Start the web socket connection and keep it open until aborted
+>     LOOP.create_task(example())
+>     LOOP.run_forever()
+> finally:
+>     LOOP.stop()
+>     LOOP.close()
+> ```
+
+The first (bad) example totally lacks some crucial information. Imagine you had to set up the project with the first example only.
+
+The second (good) example clearly mentions which libraries the collaborator needs to imported, gives a clear hint on how to fill the placeholder variables, provides code-specific syntax highlighting and shows that the crucial keywords `async` and `await` needs to be provided. If a collaborator was about to run this code block from above, no errors would occur.
+
+#### Filenames & line numbers
+
+Props to you when you even think of mentioning the filename where others can find a specific part of your code. Even more props to you when you include the line number. Now let's take a look at how to include and format these two things in your Markdown file:
+
+##### Bad example
+
+**Markdown**
+
+```markdown
+The WebSocket connection is established on line 420 in connection_handler.py
+
+<!--
+Your multiple lines of code (with syntax highlighting!!!!!!) goes here
+-->
+
+After you have established the connection you can subscribe to a state with the function subscribe_state() on line 123.
+
+<!--
+Another code block (with syntax highlighting!!!!!!)
+-->
+```
+
+**Output**
+
+> The WebSocket connection is established on line 420 in connection_handler.py
+>
+> _Placeholder for code block_
+>
+> After you have established the connection you can subscribe to a state with the function subscribe_state() on line 123.
+>
+> _Placeholder for code block_
+
+##### Good example
+
+**Markdown**
+
+```markdown
+The WebSocket connection is established on `line 420` in `connection_handler.py`
+
+<!--
+Your multiple lines of code (with syntax highlighting!!!!!!) goes here
+-->
+
+After you have established the connection you can subscribe to a state with the function `subscribe_state()` on `line 123`.
+
+<!--
+Another code snippet (with syntax highlighting!!!!!!)
+-->
+```
+
+**Output**
+
+> The WebSocket connection is established on `line 420` in `connection_handler.py`
+>
+> _Placeholder for code block_
+>
+> After you have established the connection you can subscribe to a state with the function `subscribe_state()` on `line 123`.
+>
+> _Placeholder for code block_
+
+Do you notice how this makes a difference to the reader? With highlighting readers can more easily differentiate normal text from code relevant text.
+
+While it might be overkill to provide every line number - also because they might change regularly - I consider the inclusion of line numbers whenever possible as good practice. Even if you do not include the line numbers make sure to **mention the filename and the described function names** at least.
+
+### Real world examples
+
+This section is dedicated to real world examples of good technical documentation and shall give you an understanding of the concept.
+
+- [slack api][slack-api-doc]
+- [traefik (GitHub)][traefik-doc]
+- [DigitalOcean Product Documentation][digitalocean-doc]
+- [How To Secure A Linux Server (GitHub)][secure-linux-server-doc]
+
+Do you know more real world examples of good documentation? [Let me know](#contact) and I will list them above.
 
 ## Contribution
 

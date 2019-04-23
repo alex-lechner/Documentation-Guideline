@@ -1,5 +1,7 @@
 # Project title
 
+<!-- Section for your links, references, etc. --->
+
 [//]: # "References"
 [logo]: https://via.placeholder.com/900x300/000000/FFFFFF/?text=project+logo
 [shields-badge]: https://img.shields.io/badge/make%20your%20own%20badges-on%20shields.io-brightgreen.svg
@@ -20,9 +22,15 @@
 [gitbook]: https://www.gitbook.com/
 [bibtex-wikipedia]: https://en.wikipedia.org/wiki/BibTeX
 
+<!-- Your project's logo --->
+
 ![Your project's logo][logo]
 
+<!-- Your badges --->
+
 [![shields.io badge][shields-badge]](https://shields.io)
+
+<!-- One liner about your project --->
 
 One short sentence about your project goes here.
 
@@ -67,9 +75,9 @@ Don't forget to include code snippets for easier understanding!
 
 ## Documentation
 
-Either write your documentation here or [provide a link to your extensive documentation][documentation-link].
+Either write your documentation here or [provide a link to your extensive documentation website][documentation-link].
 
-If you have a big code base and lots of things to document you should consider using a documentation tool like [Sphinx][sphinx], [Mkdocs][mkdocs], [Gitbook][gitbook] or any other documentation tool which generates static HTML-files.
+If you have a big code base and lots of things to document you should consider using a documentation tool like [Sphinx][sphinx], [Mkdocs][mkdocs], [Gitbook][gitbook] or any other documentation tool to generate static HTML-files which you then can host on a server.
 
 ## Contribution
 
@@ -81,7 +89,7 @@ Describe how your team members and contributors can contribute to this project. 
 | :------------------------------------------------------------------------------: | :------------------------------------------------------------------: | :------------------------------------------------------------------------: |
 
 
-Now that you have included yourself, your contributors and/or team members above also make sure to list some further inspirational sources and references for your project:
+Now that you have included yourself, your contributors and/or team members above also make sure to list some further inspirational resources and references for your project:
 
 - [Some nice article you have read](#)
 - [An awesome GitHub repository that you have made use of](#)
@@ -89,7 +97,7 @@ Now that you have included yourself, your contributors and/or team members above
 
 ## License
 
-Provide your License information here and link to your [LICENSE.md][license] file.
+Provide your license information here and link to your [LICENSE.md][license] file.
 
 ## Citation
 
