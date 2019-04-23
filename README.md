@@ -55,11 +55,11 @@ This documentation guideline serves as a boilerplate template and tutorial for w
         - [Good example](#good-example-2)
     - [Wording](#wording)
       - [Write for the DAU (dumbest assumable user)](#write-for-the-dau-dumbest-assumable-user)
-        - [Bad](#bad)
+        - [Bad Example](#bad-example)
         - [Good example](#good-example-3)
       - [Grammar and spelling](#grammar-and-spelling)
     - [Documentation tools](#documentation-tools)
-      - [Bad Example](#bad-example)
+      - [Bad Example](#bad-example-1)
       - [Good example](#good-example-4)
     - [Highlighting](#highlighting)
       - [Code blocks](#code-blocks)
@@ -126,8 +126,8 @@ Again, think of your documentation like a book: It might start small with a few 
 **Markdown**
 
 ```markdown
-- [h2-header](#link-to-your-h1-headline)
-- [h1-header](#link-to-your-h2-headline)
+- [h2-header](#link-to-your-h2-headline)
+- [h1-header](#link-to-your-h1-headline)
   - [h3-header](#link-to-your-h3-headline)
   - [h4-header](#link-to-your-h4-headline)
 - [h5-header](#link-to-your-h5-headline)
@@ -136,8 +136,8 @@ Again, think of your documentation like a book: It might start small with a few 
 
 **Output**
 
-> - [h2-header](#link-to-your-h1-headline)
-> - [h1-header](#link-to-your-h2-headline)
+> - [h2-header](#link-to-your-h2-headline)
+> - [h1-header](#link-to-your-h1-headline)
 >   - [h3-header](#link-to-your-h3-headline)
 >   - [h4-header](#link-to-your-h4-headline)
 > - [h5-header](#link-to-your-h5-headline)
@@ -402,7 +402,7 @@ There's also a book called [Don't make me think by Steve Kruger][dont-make-me-th
 
 However, what you should avoid is documenting stuff which is already documented by other sources. You can simply provide a link for further information. To give you a quick example: Let's imagine you have a NodeJS project with the famous `package.json` file inside of your project's folder. For someone who is new to NodeJS, this file will be a complete mystery to that person. But instead of writing complete details about this file you can simply write: "The `package.json` file manages all necessary dependencies for production and development and provides basic configurations for the project. For further information please read [the official documentation][npm-documentation]."
 
-##### Bad
+##### Bad Example
 
 **Markdown**
 
