@@ -13,6 +13,10 @@
 [dont-make-me-think-book]: https://www.amazon.de/Dont-Make-Me-Think-Usability/dp/0321965515
 [npm-documentation]: https://docs.npmjs.com/files/package.json
 [grammarly-app]: https://app.grammarly.com
+[sphinx]: https://www.sphinx-doc.org/en/master/
+[mkdocs]: https://www.mkdocs.org/
+[gitbook]: https://www.gitbook.com/
+[read-the-docs]: https://readthedocs.org/
 [license]: ./LICENSE.md
 [issue-tracker]: https://github.com/alex-lechner/Documentation-Guideline/issues
 [readme-template]: ./template/README.md
@@ -49,6 +53,11 @@ This documentation guideline serves as a boilerplate template and tutorial for w
         - [Bad Example](#bad-example)
         - [Good example](#good-example-3)
       - [Grammar and spelling](#grammar-and-spelling)
+    - [Documentation tools](#documentation-tools)
+      - [Bad Example](#bad-example-1)
+      - [Good example](#good-example-4)
+    - [Code snippets](#code-snippets)
+    - [Good documentation examples](#good-documentation-examples)
   - [Contribution](#contribution)
   - [Acknowledgement](#acknowledgement)
   - [License](#license)
@@ -317,17 +326,40 @@ Key takeaways:
 
 #### Grammar and spelling
 
-Remember that school and university are over? Even though you are in the real, practical world now this is not an excuse for you to forget about grammar, spelling rules and proper tenses. Since we are all human errors happen from time to time. To avoid this in the best possible way either try to let another person proofread your documentation or [use Grammarly][grammarly-app] before publishing your documentation. Personally, I prefer the latter because it's fast and convenient.
+Remember that school and university are over? Even though you are in the real, practical world now this is not an excuse for you to forget about grammar, spelling rules and proper tenses. Since we are all human errors can happen from time to time. To avoid this in the best possible way either try to let another person proofread your documentation or [use Grammarly][grammarly-app] before publishing your documentation. Personally, I prefer the latter because it's fast and convenient.
 
 The good part about not being in school and university anymore is that nobody dictates how many characters you have to write and which words you must not or have to use. People vote with their feet: If they don't like what you write they simply go away (or heavily criticize your documentation). It is your responsibility to find out what makes people engage with your content and adapt to that. You can either write your documentation dry and formal or make it a little more personal. You are the creator!
 
-In my opinion, I enjoy reading documentations with a human touch. Whether the documentation has some emojis, anecdotal side stories or even emotional statements it makes the whole documentation more refreshing. The purpose of documentation is to be informal but sprinkling a little bit of personality on it makes the documentation less boring. But don't overdo it!
+In my opinion, I enjoy reading documentations with a human touch. Whether the documentation has some emojis, anecdotal side stories or even emotional statements it makes the whole documentation more refreshing. The purpose of documentation is to be informative but sprinkling a little bit of personality on it makes the documentation less boring. But don't overdo it!
 
-TODO: Explain when and how to use a documentation tool
+### Documentation tools
+
+As your documentation grows bigger and bigger you might consider using a documentation tool at some point. Documentation tools like [Sphinx][sphinx], [Mkdocs][mkdocs] or [Gitbook][gitbook] offer you a convenient way to generate static HTML-files for your documentation. Among the open source community, [Read the Docs][read-the-docs] is very popular and commonly used. So instead of having your documentation in only one Markdown file documentation tools help you to create your own website specifically for your documentation. Furthermore, having a documentation website comes with the benefit of custom designs, navigation bar, sidebar, animations and so on - basically, everything that a website with HTML, CSS, and Javascript is capable of. You can even include a build job in your continuous integration pipeline to automate the HTML-file generation when you update your documentation. In my opinion, there is no golden rule on when to switch to a documentation tool since it is highly dependent on your project's scope. However, if your collaborators will have to scroll through your docs for more than a minute to get to the desired topic then you will probably know that it is time to split up your documentation and generate an own website for it. Basically, you will still have your `README.md` in your project's root folder with all the basic sections in it like `Table of contents`, `Getting started`, `Documentation`, `Contribution`, etc. but you will provide an external link to your documentation website under the section `Documentation` like in the good example below.
+
+#### Bad Example
+
+```markdown
+## Documentation
+
+<!--
+More than 100.000 lines of documentation. It's very messy and collaborators will have to scroll all the way through.
+-->
+```
+
+#### Good example
+
+```markdown
+## Documentation
+
+[Please find the orderly structured documentation of this project on our website.][documentation-link]
+```
+
+### Code snippets
 
 TODO: Give bad, good and best examples if code snippets are included
-
 TODO: How files and code references should be highlighted
+
+### Good documentation examples
 
 TODO: Include examples of well-documented projects
 
